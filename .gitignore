@@ -1,0 +1,16 @@
+# 本地临时文件与浏览器导出的工程副本
+*.smoke-test.js
+*.runtime-smoke-test.js
+*.tmp
+*.log
+
+# 不提交真实工程、底图、文档或运行数据
+private/
+local/
+*.dwg
+*.dxf
+*.vsd
+*.vsdx
+
+# 仅供当前开发过程使用，不属于公开交付内容
+docs/superpowers/

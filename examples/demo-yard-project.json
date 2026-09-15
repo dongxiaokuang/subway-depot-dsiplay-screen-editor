@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "yard-map-public-v1",
+  "project": {
+    "lineId": "LINE-DEMO",
+    "line": "示例线",
+    "yardId": "YARD-DEMO",
+    "yard": "示例车辆段",
+    "diagramType": "yard",
+    "version": "v1.0.0"
+  },
+  "yard": {
+    "schemaVersion": "yard-map-public-v1",
+    "project": {
+      "lineId": "LINE-DEMO",
+      "line": "示例线",
+      "yardId": "YARD-DEMO",
+      "yard": "示例车辆段",
+      "diagramType": "yard",
+      "version": "v1.0.0"
+    },
+    "viewport": { "x": 0, "y": 0, "w": 1600, "h": 900 },
+    "layers": { "underlay": true, "area": true, "line": true, "track": true, "switch": true, "signal": true, "vehicle": true, "text": true },
+    "dictionaries": {
+      "lines": [
+        { "id": "LINE-DEMO", "code": "DEMO", "name": "示例线", "color": "#26d7ff", "enabled": true, "sort": 1, "yards": [ { "id": "YARD-DEMO", "code": "DEMO-YARD", "name": "示例车辆段", "enabled": true } ] }
+      ],
+      "vehicleTypes": [
+        { "id": "VT-EMU", "code": "EMU", "name": "电客车", "enabled": true, "sort": 1, "requiresConsist": true },
+        { "id": "VT-ENG", "code": "ENG", "name": "工程车", "enabled": true, "sort": 2, "requiresConsist": false }
+      ],
+      "consists": [
+        { "id": "CONSIST-2", "count": 2, "carCodes": [ "1A", "2A" ], "enabled": true, "sort": 1 },
+        { "id": "CONSIST-4", "count": 4, "carCodes": [ "1A", "1B", "2B", "2A" ], "enabled": true, "sort": 2 },
+        { "id": "CONSIST-6", "count": 6, "carCodes": [ "1A", "1B", "1C", "2C", "2B", "2A" ], "enabled": true, "sort": 3 }
+      ],
+      "safetyDevices": [
+        { "id": "DEV-CHOCK", "code": "CHOCK", "name": "止轮器", "color": "#f20202", "shape": "triangle", "enabled": true, "sort": 1 },
+        { "id": "DEV-REDLAMP", "code": "REDLAMP", "name": "红闪灯", "color": "#f20202", "shape": "circle", "enabled": true, "sort": 2 },
+        { "id": "DEV-NOMOVE", "code": "NOMOVE", "name": "禁动牌", "color": "#f20202", "shape": "plate", "enabled": true, "sort": 3 }
+      ]
+    },
+    "objects": {
+      "areas": [
+        { "id": "AREA-P01", "code": "P01", "name": "示例供电分区", "x": 180, "y": 150, "w": 1180, "h": 350, "areaType": "供电分区", "status": "hot", "coverage": "A01-A05", "members": [ { "type": "track", "id": "TRK-A01" }, { "type": "track", "id": "TRK-A02" }, { "type": "track", "id": "TRK-A03" }, { "type": "track", "id": "TRK-A04" }, { "type": "track", "id": "TRK-A05" } ], "label": { "show": true, "position": "rightTop", "fontSize": 11, "color": "#9fd8e8" }, "style": { "color": "#168bf0", "opacity": 18, "width": 1.5 } }
+      ],
+      "tracks": [
+        { "id": "TRK-A01", "code": "A01", "name": "A01", "purpose": "停车列检", "areaId": "AREA-P01", "powerZoneId": "AREA-P01", "facilities": { "pit": "否", "elevatedPlatform": "否" }, "label": { "show": true, "position": "leftTop", "fontSize": 12, "color": "#dff8ff" }, "style": { "color": "#d8f2ff", "opacity": 100, "width": 2.5 }, "geometry": { "type": "polyline", "points": [ { "x": 260, "y": 210 }, { "x": 1280, "y": 210 } ] }, "business": { "status": "free", "trainNo": "", "end": "整股道", "remark": "" }, "topology": { "fromNode": "", "toNode": "", "links": [] } },
+        { "id": "TRK-A02", "code": "A02", "name": "A02", "purpose": "停车列检", "areaId": "AREA-P01", "powerZoneId": "AREA-P01", "facilities": { "pit": "否", "elevatedPlatform": "否" }, "label": { "show": true, "position": "leftTop", "fontSize": 12, "color": "#dff8ff" }, "style": { "color": "#d8f2ff", "opacity": 100, "width": 2.5 }, "geometry": { "type": "polyline", "points": [ { "x": 260, "y": 270 }, { "x": 1280, "y": 270 } ] }, "business": { "status": "free", "trainNo": "", "end": "整股道", "remark": "" }, "topology": { "fromNode": "", "toNode": "", "links": [] } },
+        { "id": "TRK-A03", "code": "A03", "name": "A03", "purpose": "停车列检", "areaId": "AREA-P01", "powerZoneId": "AREA-P01", "facilities": { "pit": "否", "elevatedPlatform": "否" }, "label": { "show": true, "position": "leftTop", "fontSize": 12, "color": "#dff8ff" }, "style": { "color": "#d8f2ff", "opacity": 100, "width": 2.5 }, "geometry": { "type": "polyline", "points": [ { "x": 260, "y": 330 }, { "x": 1280, "y": 330 } ] }, "business": { "status": "free", "trainNo": "", "end": "整股道", "remark": "" }, "topology": { "fromNode": "", "toNode": "", "links": [] } },
+        { "id": "TRK-A04", "code": "A04", "name": "A04", "purpose": "静态调试", "areaId": "AREA-P01", "powerZoneId": "AREA-P01", "facilities": { "pit": "是", "elevatedPlatform": "否" }, "label": { "show": true, "position": "leftTop", "fontSize": 12, "color": "#dff8ff" }, "style": { "color": "#d8f2ff", "opacity": 100, "width": 2.5 }, "geometry": { "type": "polyline", "points": [ { "x": 260, "y": 390 }, { "x": 1280, "y": 390 } ] }, "business": { "status": "free", "trainNo": "", "end": "整股道", "remark": "" }, "topology": { "fromNode": "", "toNode": "", "links": [] } },
+        { "id": "TRK-A05", "code": "A05", "name": "A05", "purpose": "临修作业", "areaId": "AREA-P01", "powerZoneId": "AREA-P01", "facilities": { "pit": "否", "elevatedPlatform": "是" }, "label": { "show": true, "position": "leftTop", "fontSize": 12, "color": "#dff8ff" }, "style": { "color": "#d8f2ff", "opacity": 100, "width": 2.5 }, "geometry": { "type": "polyline", "points": [ { "x": 260, "y": 450 }, { "x": 1280, "y": 450 } ] }, "business": { "status": "free", "trainNo": "", "end": "整股道", "remark": "" }, "topology": { "fromNode": "", "toNode": "", "links": [] } }
+      ],
+      "switches": [ { "id": "SW-001", "code": "D01", "name": "示例道岔", "x": 210, "y": 270, "status": "normal", "links": [], "remark": "", "label": { "show": true, "position": "leftTop", "fontSize": 11, "color": "#dff8ff" }, "style": { "color": "#ffffff", "opacity": 100, "width": 1, "size": 16 } } ],
+      "signals": [ { "id": "SIG-001", "code": "X01", "name": "示例信号机", "x": 1320, "y": 330, "direction": "右", "status": "normal", "guard": "", "label": { "show": true, "position": "leftTop", "fontSize": 11, "color": "#dff8ff" }, "style": { "color": "#ffd452", "opacity": 100, "width": 1, "size": 8 } } ],
+      "vehicles": [],
+      "lines": [],
+      "texts": [ { "id": "TXT-001", "code": "TITLE", "name": "示例车辆段", "content": "示例车辆段", "x": 800, "y": 100, "orientation": "horizontal", "label": { "show": false, "position": "leftTop", "fontSize": 11, "color": "#dff8ff" }, "style": { "color": "#dff8ff", "opacity": 100, "width": 400, "fontFamily": "Microsoft YaHei", "fontSize": 24 } } ]
+    }
+  },
+  "runtime": {
+    "schemaVersion": "yard-runtime-v7",
+    "tracks": { "TRK-A01": { "status": "free", "powerStatus": "hot", "remark": "" }, "TRK-A02": { "status": "free", "powerStatus": "hot", "remark": "" }, "TRK-A03": { "status": "free", "powerStatus": "hot", "remark": "" }, "TRK-A04": { "status": "free", "powerStatus": "hot", "remark": "" }, "TRK-A05": { "status": "free", "powerStatus": "hot", "remark": "" } },
+    "areas": {}, "switches": {}, "signals": {}, "vehicles": [], "markers": [], "logs": [], "layers": { "underlay": true, "area": true, "line": true, "track": true, "switch": true, "signal": true, "vehicle": true, "text": true, "marker": true }, "nextSeq": 1, "updatedAt": ""
+  },
+  "note": "公开示例工程，不含任何真实线路、场段、底图或运行数据。"
+}
