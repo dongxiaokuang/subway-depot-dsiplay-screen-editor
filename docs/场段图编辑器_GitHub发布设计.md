@@ -43,7 +43,7 @@ subway-depot-dsiplay-screen-editor/
 │   └── demo-yard-project.json     # 脱敏示例工程
 ├── docs/
 │   ├── 场段图编辑器_GitHub发布设计.md
-│   └── images/                    # README 截图，由项目方提供后放入
+│   └── images/                    # README 成果截图
 ├── README.md                      # GitHub 图文介绍与使用说明
 ├── LICENSE                        # MIT 开源协议
 ├── .github/workflows/deploy-pages.yml # main 分支自动发布 Pages
@@ -60,14 +60,14 @@ subway-depot-dsiplay-screen-editor/
 
 README 使用中文，包含：产品定位、核心能力、适用对象、运行方式、编辑流程、运行发布流程、JSON 工程说明、截图展示区、数据安全边界、版本与贡献说明。
 
-需准备四张截图，建议分别为：
+README 已包含四张成果截图，分别为：
 
 1. 场段编辑页全景。
 2. 选中股道后的属性与对象配置。
 3. 运行发布页的车辆、安全设备及供电图例。
 4. 全屏大屏页。
 
-截图放入 `docs/images/` 后，README 直接引用。截图中不得出现真实基地图、车辆号、密码、浏览器个人信息或业主资料。
+截图均放在 `docs/images/` 并由 README 直接引用。截图使用导入工程的图形配置展示编辑能力；车辆、安全设备和运行状态为展示性补充数据，不表示现场实时运行状态。后续替换截图时，应继续避免出现账号口令、浏览器个人信息及未获授权的资料。
 
 ## 7. 验收标准
 
